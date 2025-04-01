@@ -427,7 +427,7 @@
       border: 1px solid rgba(255, 215, 0, 0.3);
       box-shadow: var(--glow);
       backdrop-filter: blur(5px);
-      height: 470px;
+      height: 300px;
     }
     
     .welcome-logo {
@@ -694,23 +694,7 @@
         opacity: 0.3;
       }
       
-      .welcome-quote {
-        font-size: 1.5rem;
-      }
-      
-      .welcome-text {
-        font-size: 0.3rem;
-      }
-      
-      .welcome-container {
-        padding: 40px 20px;
-      }
-      
-      .welcome-logo {
-        width: 150px;
-      }
-    }
-
+     
     @media (max-width: 480px) {
       .hero h1 {
         font-size: 2rem;
@@ -741,20 +725,7 @@
         grid-template-columns: 1fr;
       }
       
-      .welcome-quote {
-        font-size: 0.9rem;
-        padding: 0 15px;
-      }
       
-      .welcome-logo {
-        width: 120px;
-      }
-      .welcome-logo-container{
-        height: 100px;
-        margin-top: -150px;
-      }
-      .welcome-text-container{
-        margin-top: -70px;
       }
       /* Prevent zoom on input focus */
       @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -765,6 +736,37 @@
         }
       }
     }
+    .simple-welcome {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.simple-logo {
+  
+  width: 300px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+}
+
+.simple-text {
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.simple-text p:first-child {
+  color: var(--yellow);
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .simple-logo {
+    width: 100px;
+  }
+}
   </style>
 </head>
 
@@ -897,27 +899,18 @@
     </div>
   </section>
   
-  <section class="welcome-section" id="welcome">
-    <div class="container">
-      <div class="welcome-container">
-        <div class="welcome-content">
-          <div class="welcome-logo-container">
-            <img src="atc2.png" alt="ATC Logo" class="welcome-logo">
-          </div>
-          <div class="welcome-text-container">
-            <h2 class="welcome-title">ATC</h2>
-            <div class="welcome-quote">
-              "Innovation is seeing what everybody has seen and thinking what nobody has thought."
-            </div>
-            <div class="welcome-message">
-              Join the ALIET Techpreneur Club and be part of a community that fosters innovation, creativity, and technological entrepreneurship. Together, let's build the future!
-            </div>
-          </div>
-        </div>
+  <!-- WELCOME SECTION -->
+<section class="welcome-section" id="welcome">
+  <div class="container">
+    <div class="simple-welcome">
+      <img src="atc2.png" alt="ALIET Techpreneur Club Logo" class="simple-logo">
+      <div class="simple-text">
+        <p>"Innovation is seeing what everybody has seen and thinking what nobody has thought."</p>
+        <p>Join the ALIET Techpreneur Club and be part of a community that fosters innovation, creativity, and technological entrepreneurship. Together, let's build the future!</p>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
   <!-- FOOTER -->
   <footer>
     <div class="container">
