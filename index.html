@@ -412,33 +412,65 @@
       line-height: 1.6;
     }
 
-    /* REGISTRATION SECTION */
-    .register-form {
-      max-width: 500px;
+    /* WELCOME SECTION */
+    .welcome-section {
+      text-align: center;
+      padding: 80px 0;
+    }
+    
+    .welcome-container {
+      max-width: 800px;
       margin: 0 auto;
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group input {
-      width: 100%;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 215, 0, 0.5);
-      border-radius: 5px;
-      color: var(--text-light);
-      font-size: 1rem;
-      transition: all 0.3s;
+      background: var(--card-bg);
+      padding: 60px 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      box-shadow: var(--glow);
       backdrop-filter: blur(5px);
     }
     
-    .form-group input:focus {
-      outline: none;
-      border-color: var(--yellow);
-      box-shadow: var(--glow);
-      background: rgba(255, 255, 255, 0.15);
+    .welcome-logo {
+      width: 200px;
+      margin: 0 auto 30px;
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.7));
+      display: block;
+    }
+    
+    .welcome-quote {
+      font-size: 2rem;
+      color: var(--yellow);
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+      position: relative;
+      padding: 0 20px;
+    }
+    
+    .welcome-quote::before,
+    .welcome-quote::after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--yellow);
+      opacity: 0.7;
+      position: absolute;
+    }
+    
+    .welcome-quote::before {
+      top: -20px;
+      left: -10px;
+    }
+    
+    .welcome-quote::after {
+      bottom: -40px;
+      right: -10px;
+    }
+    
+    .welcome-text {
+      color: var(--text-light);
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 30px auto 0;
+      line-height: 1.8;
     }
 
     /* FOOTER */
@@ -660,6 +692,22 @@
         animation: none;
         opacity: 0.3;
       }
+      
+      .welcome-quote {
+        font-size: 1.5rem;
+      }
+      
+      .welcome-text {
+        font-size: 1rem;
+      }
+      
+      .welcome-container {
+        padding: 40px 20px;
+      }
+      
+      .welcome-logo {
+        width: 150px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -692,8 +740,13 @@
         grid-template-columns: 1fr;
       }
       
-      .form-group input {
-        padding: 12px;
+      .welcome-quote {
+        font-size: 1.3rem;
+        padding: 0 15px;
+      }
+      
+      .welcome-logo {
+        width: 120px;
       }
       
       /* Prevent zoom on input focus */
@@ -707,6 +760,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- ENHANCED TECH BACKGROUND -->
   <div class="bg-wrapper">
@@ -836,24 +890,24 @@
     </div>
   </section>
   
-  <!-- REGISTRATION SECTION -->
-  <section class="register" id="register">
+  <section class="welcome-section" id="welcome">
     <div class="container">
-      <h2 class="section-title">REGISTER NOW</h2>
-      <p style="text-align: center; margin-bottom: 30px; color: var(--text-medium);">Limited seats available for our inaugural event</p>
-      
-      <form class="register-form">
-        <div class="form-group">
-          <input type="text" placeholder="Full Name" required>
+      <div class="welcome-container">
+        <div class="welcome-content">
+          <div class="welcome-logo-container">
+            <img src="atc2.png" alt="ATC Logo" class="welcome-logo">
+          </div>
+          <div class="welcome-text-container">
+            <h2 class="welcome-title">ATC</h2>
+            <div class="welcome-quote">
+              "Innovation is seeing what everybody has seen and thinking what nobody has thought."
+            </div>
+            <div class="welcome-message">
+              Join the ALIET Techpreneur Club and be part of a community that fosters innovation, creativity, and technological entrepreneurship. Together, let's build the future!
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <input type="email" placeholder="Email" required>
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Department" required>
-        </div>
-        <button type="submit" class="cta-button">CONFIRM ATTENDANCE</button>
-      </form>
+      </div>
     </div>
   </section>
   
